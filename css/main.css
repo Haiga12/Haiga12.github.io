@@ -8,7 +8,58 @@ body {
     background-color: #EEE;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
     /* This defines the em size */
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Mobile Layout */
+@media only screen and (max-width:414px){
+    .sticky h2{
+        font-size: 1.7em;
+    }
+}
+
+/* Tablet Layout */
+@media only screen and (min-width: 415px) and (max-width: 960px) {
+
+    .universetext aside{
+        width: 50%;
+        height: 100%;
+    }
+    .starsgallery, .nebulaetext article, .nebulaegallery {
+        height: 100%;
+    }
+
+    hgroup, .sticky {
+        flex-direction: column;
+    }
+
+    .sticky h2{
+        font-size: 2em;
+    }
+}
+  
+/* Desktop Layout */
+@media only screen and (min-width: 961px) {
+    .universetext article{
+        height: 100%;
+    }
+
+    .starsgallery, .nebulaegallery{
+        height: 100%;
+    }
+
+    hgroup, .sticky {
+        flex-direction: column;
+    }
 }
 
 /* === Header Info === */
@@ -19,10 +70,6 @@ header.universe {
     background: url(../images/galaxy2-large.jpg) no-repeat fixed center;
     background-size: cover;
     color:#FFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 2em;
 }
 
@@ -32,10 +79,6 @@ header.planets {
     background: url(../images/earth-large.jpg) no-repeat fixed center; 
     background-size: cover;
     color:#FFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 2em;
 }
 
@@ -45,10 +88,6 @@ header.stars {
     background: url(../images/sun-large.jpg) no-repeat fixed center; 
     background-size: cover;
     color:#FFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 2em;
 }
 
@@ -58,10 +97,6 @@ header.nebulae {
     background: url(../images/nebula-large.jpg) no-repeat fixed center; 
     background-size: cover;
     color:#FFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 2em;
 }
 
@@ -139,7 +174,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1vmax;
+    font-size: 1.5vmax;
     line-height: 2em;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
@@ -171,7 +206,6 @@ h3 {
 }
 
 .sticky nav a{
-    flex: 1;
     color: #EEE;
     padding: 0.8em;
     text-decoration: none;
@@ -199,15 +233,13 @@ h3 {
 }
 
 .universetext{
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #eee;
+    text-align: left;
 }
 
 .universetext article {
     flex: 3;
-    min-width: 400px;
     padding: 2em;
+    background-color: #EEE;
 }
 
 .universetext aside {
@@ -236,14 +268,11 @@ h3 {
 }
 
 .planetstext{
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #eee;
+    text-align: left;
 }
 
 .planetstext article {
     flex: 3;
-    min-width: 400px;
     padding: 2em;
 }
 
@@ -272,14 +301,11 @@ h3 {
 }
 
 .starstext{
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #eee;
+    text-align: left;
 }
 
 .starstext article {
     flex: 3;
-    min-width: 400px;
     padding: 2em;
 }
 
@@ -309,14 +335,11 @@ h3 {
 }
 
 .nebulaetext{
-    display: flex;
-    flex-flow: row wrap;
-    background-color: #eee;
+    text-align: left;
 }
 
 .nebulaetext article {
     flex: 2;
-    min-width: 400px;
     padding: 2em;
 }
 
@@ -350,84 +373,58 @@ h3 {
 
 /* === Gallery === */
 
-.gallery {
+.universegallery {
     min-height: 50vh;
     height: auto;
-    display: flex;
-    flex-flow: row wrap;
     justify-content: space-evenly;
-    align-items: center;
     background-image: url(../images/stars-bg.jpg);
     padding: 2em;
     border: 1px solid rgb(118, 105, 201);
 }
 
-.gallery div {
+.universegallery div {
     width: 300px;
     height: 300px;
-    display: flex;
     justify-content: center;
-    align-items: center;
     margin: 1em;
 }
 
 .planetsgallery {
     flex: 1;
-    height: auto;
-    display: flex;
-    flex-flow: column;
     justify-content: space-evenly;
-    align-items: center;
     background-image: url(../images/stars-bg.jpg);
     border: 1px solid rgb(118, 105, 201);
 }
 
 .planetsgallery div {
     height: auto;
-    display: flex;
-    flex-flow: column;
     justify-content: center;
-    align-items: center;
     padding: 2em;
 }
 
 .starsgallery {
     flex: 1;
-    height: auto;
-    display: flex;
-    flex-flow: column;
     justify-content: space-evenly;
-    align-items:center;
     background-image: url(../images/stars-bg.jpg);
     border: 1px solid rgb(118, 105, 201);
 }
 
 .starsgallery div {
     height: auto;
-    display: flex;
-    flex-flow: column;
     justify-content: center;
-    align-items: center;
     padding: 2em;
 }
 
 .nebulaegallery {
     flex: 1;
-    height: auto;
-    display: flex;
-    flex-flow: column;
     justify-content: space-evenly;
-    align-items: center;
     background-image: url(../images/stars-bg.jpg);
     border: 1px solid rgb(118, 105, 201);
 }
 
 .nebulaegallery div {
     height: auto;
-    display: flex;
-    flex-flow: column;
     justify-content: center;
-    align-items: center;
     padding: 2em;
 }
 
@@ -437,8 +434,6 @@ footer {
     background-color: #333;
     color: #EEE;
     font-style: italic;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     padding: 1em;
 }
