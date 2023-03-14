@@ -1,0 +1,74 @@
+.container-fluid{
+    padding: 0;
+}
+
+p{
+    margin: 2em;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #EEE;
+}
+
+@keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: translatez(-50vw) scale(.2);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+}
+.animate-pop-in {
+    animation: pop-in 0.8s ease-out;
+}
+
+header{
+    height: 87vh;
+    color:#FFF;
+    background: url(../images/galaxy2-large.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+header h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 5vmax;
+    text-shadow: 3px 3px #000;
+}
+
+header h2{
+    font-size: 1.5vmax;
+    text-shadow: 3px 2px #000;
+}
+
+h2 {
+    align-items: center;
+    font-size: 2vmax;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav{
+    height: 13vh;
+    color: #FFF;
+    border: 1px solid rgb(118, 105, 201);
+}
+
+nav a{
+    border: 1px solid rgb(118, 105, 201);
+    border-radius: 4px;
+}
+
+nav a:hover{
+    background-color: rgb(118, 105, 201);
+    font-weight: bold;
+}
+
+aside{
+    background-color: rgba(118, 105, 201, 0.75);
+}
+
+footer{
+    color: #FFF;
+}
